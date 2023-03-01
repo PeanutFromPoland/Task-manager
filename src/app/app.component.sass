@@ -1,0 +1,46 @@
+.container
+    width: 100vw
+    height: 100vh
+    display: grid
+    grid-template-columns: [page-start] repeat(auto-fill, minmax(200px, 1fr)) [page-end]
+    background-color: hsl(0, 98%, 4%)
+
+.sidebar
+    color: hsl(0, 99%, 96%)
+    background-color: hsl(0, 48%, 45%)
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 2em auto
+
+.sidebar__logo
+    font-size: 1.5rem
+    width: 100%
+    box-sizing: border-box
+    padding: .5em
+
+
+.sidebar__modes-list
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(auto-fill, minmax(75px, 1fr))
+    padding: 1em
+    justify-self: center
+    box-sizing: border-box
+    width: 100%
+    
+.mode
+    display: flex
+    align-items: center
+    justify-content: start
+    width: 100%
+
+.mode__icon
+    filter: invert(100%) sepia(5%) saturate(1%) hue-rotate(126deg) brightness(114%) contrast(101%)
+    width: 30px
+    aspect-ratio: 1 / 1
+
+.mode__title
+    margin-left: 1em
+
+.tasks-interface
+    grid-column: 2 / page-end
