@@ -33,8 +33,28 @@
                 <div class="mode__title">Pattern</div>
             </div>
         </div>
+        <div class="sidebar__hide-btn">
+            <img src="../assets/arrow-left.svg" alt="Hide sidebar" class="sidebar__icon">
+        </div>
     </div>
     <div class="tasks-interface">
         <router-outlet></router-outlet>
+    </div>
+    <div class="tools-bar">
+        <button class="btn" title="Add new task" [ngStyle]="{'display': sidebarCollapsed ? 'none' : 'block'}">
+            <img src="../assets/menu.svg" alt="Menu" srcset="" class="btn__icon">
+        </button>
+        <button class="btn" title="Add new task">
+            <img src="../assets/plus.svg" alt="Add" srcset="" class="btn__icon">
+        </button>
+        <button class="btn" title="Switch theme">
+            <img src="../assets/pallete.svg" alt="Pick theme" srcset="" class="btn__icon">
+        </button>
+        <div class="pallete" [ngStyle]="{'grid-column': '2 / span ' + colors.length, 'display': 'none'}">
+            <div value="" *ngFor="let c of colors"></div>
+        </div>
+        <button class="btn" title="Build own task manager!">
+            <img src="../assets/settings.svg" alt="Settings" srcset="" class="btn__icon">
+        </button>
     </div>
 </div>
